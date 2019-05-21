@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <link rel="canonical" href="https://thegeniusbrand.com/">
+
+    
+      <link rel="shortcut icon" href="/static/images/Brain-Bot.png" type="image/png">
+    
+
+    
+    <title>
+      Brain Bot
+      
+      
+      
+    </title>
+
+    
+      <meta name="description" content="SUPPLEMENT SMARTER WITH THE GENIUS BRAND. Highest quality supplementation with scientifically proven, all natural raw ingredients, and clinically effective dosages. We aim to provide premium, innovative, industry-leading wellness supplements to help you live an active, healthy, nutritious, and long-lasting life.">
+    
+
+    
+  <meta property="og:site_name" content="Brain Bot">
+  <meta property="og:url" content="https://thegeniusbrand.com/">
+  <meta property="og:title" content="Brain Bot">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="SUPPLEMENT SMARTER WITH THE GENIUS BRAND. Highest quality supplementation with scientifically proven, all natural raw ingredients, and clinically effective dosages. We aim to provide premium, innovative, industry-leading wellness supplements to help you live an active, healthy, nutritious, and long-lasting life.">
+
+
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brain Bot">
+  <meta name="twitter:description" content="SUPPLEMENT SMARTER WITH THE GENIUS BRAND. Highest quality supplementation with scientifically proven, all natural raw ingredients, and clinically effective dosages. We aim to provide premium, innovative, industry-leading wellness supplements to help you live an active, healthy, nutritious, and long-lasting life.">
+
+
+  <link href="./static/css/main.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="./static/css/dev.css" rel="stylesheet" type="text/css" media="all" />
+  <div id="powrIframeLoader">­<style> .powrLoaded iframe { visibility: hidden; } </style></div>
+  <script src="./static/js/1.js" type="text/javascript"></script>
+  <script src="./static/js/6.js"></script>
+  <script src="./static/js/11.js"></script>
+
+  <!-- Optional, for shopping cart purpose -->
+  <!-- <script src="./static/js/10.js"></script>
+  <script src="./static/js/2.js" type="text/javascript"></script>
+  <script src="./static/js/3.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="./static/js/4.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="./static/js/5.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="./static/js/7.js"></script>
+  <script src="./static/js/8.js"></script>
+  <script src="./static/js/9.js"></script>
+  <script src="./static/js/12.js"></script>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  
+    window.theme = {
+        strings: {
+            addToCart: "Add to Cart",
+            soldOut: "Sold Out",
+            unavailable: "Unavailable"
+        },
+        moneyFormat: "${{amount}}"
+    };
+  </script>
+  <script>
+		// Subscriptions Powered by ReCharge Payments: JavaScript
+		(function() {
+			// Basic function to load script files, will be used to include jQuery
+			var loadScript = function(url, callback) {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				// If the browser is Internet Explorer
+				if (script.readyState){
+					script.onreadystatechange = function() {
+						if (script.readyState == "loaded" || script.readyState == "complete") {
+							script.onreadystatechange = null;
+							callback();
+						}
+					};
+				// For any other browser
+				} else {
+					script.onload = function() {
+						callback();
+					};
+				}
+				script.src = url;
+				document.getElementsByTagName("head")[0].appendChild(script);
+			};
+			// This is our JavaScript that we'll run after jQuery is included
+			var reChargeThemeFooterJS = function($) {
+				function reChargeSaveCartNoteAndRedirectToCart() {
+					var has_cart_note_or_attribute = false;
+					try {
+						var data = {};
+						if ($('[name="note"]').val() != undefined) {
+							var note = $('[name="note"]').val();
+							data['note'] = note;
+							has_cart_note_or_attribute = true;
+						}
+						if (has_cart_note_or_attribute) {
+							$.ajax({
+								type: 'POST',
+								data: data,
+								url: '/cart/update.js',
+								dataType: 'json',
+								success: function() {
+									window.location.href = '/cart';
+								}
+							});
+						} else {
+							window.location.href = '/cart';
+						}
+					} catch (e) {
+						window.location.href = '/cart';
+					}
+				}
+				var checkout_button_selectors = '[href="/checkout"], form[action="/cart"] button[type="submit"], form[action="/cart"] input[type="submit"], form[action="/checkout"] input[type="submit"], form[action="/checkout"] button[type="submit"]';
+				$(document).on('click', checkout_button_selectors, function(e) {
+					if (!e.target.hasAttribute('data-disable-recharge')) {
+						e.preventDefault();
+						reChargeSaveCartNoteAndRedirectToCart();
+						window.location.href = '/cart';
+					} else {
+						console.info('ReCharge disabled');
+					}
+				});
+			}
+			// Check if jQuery is added, if not, then we'll loadScript, otherwise, run reChargeJS
+			if ((typeof(jQuery) == 'undefined') || (parseInt(jQuery.fn.jquery) == 1 && parseFloat(jQuery.fn.jquery.replace(/^1\./,"")) < 7.2)) {
+				// We'll get our jQuery from Google APIs
+				loadScript('//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', function() {
+					jQuery172 = jQuery.noConflict(true);
+					reChargeThemeFooterJS(jQuery172);
+				});
+			} else {
+				reChargeThemeFooterJS(jQuery);
+			}
+		})();
+  </script>
+  <script>
+    if(typeof(Spurit) === 'undefined'){
+        var Spurit = {};
+    }
+    if(!Spurit.recurringInvoices){
+        Spurit.recurringInvoices = {};
+    }
+    if(!Spurit.recurringInvoices.snippet){
+        Spurit.recurringInvoices.snippet = {};
+    }
+    Spurit.recurringInvoices.snippet.appId = '46';
+    Spurit.recurringInvoices.snippet.shopHash = '12254c21d070378630687767f8f097dc';
+    Spurit.recurringInvoices.snippet.shopDomain = 'geniusbrand-dev.myshopify.com';
+    Spurit.recurringInvoices.snippet.folderStore = 'https://s3.amazonaws.com/shopify-apps/recurring-invoices/store/';
+    Spurit.recurringInvoices.snippet.folderCss = 'https://s3.amazonaws.com/shopify-apps/recurring-invoices/css/';
+    Spurit.recurringInvoices.snippet.moneyFormat = '${{amount}}';
+  </script>
+  <script src="./static/js/13.js"></script>
+  <script>
+    if (typeof Spurit === 'undefined') {
+      Spurit = {};
+    }
+    if (typeof Spurit.altCurrencies === 'undefined') {
+      Spurit.altCurrencies = {
+        shop_currency: 'USD',
+        cart: {"token":"5f7de8d1f167f232e73054c5c16f2cb2","note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"USD","items_subtotal_price":0,"cart_level_discount_applications":[]}
+      };
+    }
+  </script> -->
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  </head>
+  <body id="the-genius-brand" class="template-index" style="overflow: visible; height: auto;">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div id="shopify-section-header" class="shopify-section">
+      <div class="top-promo-line text-center text-white text-uppercase">
+        <div class="container">
+            <p class="d-sm-inline-block d-none">ALL PURCHASES 100% BACKED BY BRAIN BOT! - FREE SHIPPING ON ORDERS OVER $75</p>         <p class="d-sm-none">FREE SHIPPING ON ORDERS OVER $75</p>
+        </div>
+      </div>
+    </div>
+    <div data-section-id="header" data-section-type="header-section">
+      <header class="header position-relative">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-auto d-sm-none pl-0">
+                <button class="btn--sm js-menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="12px">
+                    <path fill-rule="evenodd" fill="rgb(83, 87, 90)" d="M19.417,11.995 L0.583,11.995 C0.233,11.995 -0.000,11.797 -0.000,11.496 L-0.000,10.499 C-0.000,10.199 0.233,10.000 0.583,10.000 L19.417,10.000 C19.767,10.000 20.000,10.199 20.000,10.499 L20.000,11.496 C20.000,11.797 19.767,11.995 19.417,11.995 ZM19.417,7.007 L0.583,7.007 C0.233,7.007 -0.000,6.803 -0.000,6.501 L-0.000,5.489 C-0.000,5.187 0.233,4.985 0.583,4.985 L19.417,4.985 C19.767,4.985 20.000,5.187 20.000,5.489 L20.000,6.501 C20.000,6.803 19.767,7.007 19.417,7.007 ZM19.417,1.990 L0.583,1.990 C0.233,1.990 -0.000,1.791 -0.000,1.491 L-0.000,0.494 C-0.000,0.195 0.233,-0.003 0.583,-0.003 L19.417,-0.003 C19.767,-0.003 20.000,0.195 20.000,0.494 L20.000,1.491 C20.000,1.791 19.767,1.990 19.417,1.990 Z"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="col-sm-auto col order-sm-1">
+                  
+                    <h1 itemscope="" itemtype="http://schema.org/Organization">
+                  
+                      <a href="/homepage" itemprop="url" class="site__logo text-center d-block">
+                        
+                          
+                          <img src="/static/images/Brain-Bot.png" width="100" height="100" alt="Brain Bot" itemprop="logo">
+                        
+                      </a>
+                  
+                    </h1>
+                  
+              </div>
+    
+              <div class="col-auto order-sm-3 pr-sm-15-rem pr-0">
+                
+                <button class="btn__search btn--sm js-search px-15 font-family-ProximaNovaSemibold d-sm-inline-block d-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="mr-md-5">
+                    <path class="svg__search" d="M1708,83.006a6.89,6.89,0,0,0,4.48-1.63l5.43,5.435a0.63,0.63,0,0,0,.45.186,0.614,0.614,0,0,0,.45-0.186,0.633,0.633,0,0,0,0-.9l-5.43-5.437A6.995,6.995,0,1,0,1708,83.006Zm0-12.735A5.731,5.731,0,1,1,1702.27,76,5.735,5.735,0,0,1,1708,70.271Z" transform="translate(-1701 -69)"></path>
+                  </svg>
+                  <span class="d-md-inline d-none">SEARCH</span>
+                </button>
+
+                <button class="btn__profile btn--sm d-sm-inline-block d-none js-profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                    <path class="svg__profile" d="M1834.73,81.937a11.568,11.568,0,0,0-2.82-1.695,15.03,15.03,0,0,1-2.17-1.211,7.621,7.621,0,0,0,1.88-4.575,7.206,7.206,0,0,0-.55-3.3c-0.49-.984-1.6-2.156-4.07-2.156s-3.58,1.172-4.07,2.156a7.091,7.091,0,0,0-.56,3.3,7.635,7.635,0,0,0,1.89,4.575,14.805,14.805,0,0,1-2.17,1.21,11.559,11.559,0,0,0-2.82,1.7,5.591,5.591,0,0,0-1.27,3.539A1.5,1.5,0,0,0,1819.5,87h15a1.5,1.5,0,0,0,1.5-1.522A5.591,5.591,0,0,0,1834.73,81.937Zm0.04,3.825a0.384,0.384,0,0,1-.27.111h-15a0.378,0.378,0,0,1-.38-0.381,4.546,4.546,0,0,1,.95-2.759,11.44,11.44,0,0,1,2.53-1.486,12.212,12.212,0,0,0,2.43-1.4l0.76-.718-0.66-.809a6.554,6.554,0,0,1-1.63-3.865,6.223,6.223,0,0,1,.43-2.794,3.832,3.832,0,0,1,6.14,0,6.223,6.223,0,0,1,.43,2.794,6.513,6.513,0,0,1-1.64,3.865l-0.65.809,0.75,0.718a12.477,12.477,0,0,0,2.44,1.4,11.416,11.416,0,0,1,2.53,1.486,4.4,4.4,0,0,1,.94,2.759A0.339,0.339,0,0,1,1834.77,85.761Z" transform="translate(-1818 -69)"></path>
+                  </svg>
+                </button>
+    
+                <button class="btn__cart btn--sm js-cart">
+                  <div class="svg_cart_number_parent">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                      <path class="svg__cart" d="M1891.92,71.615a0.456,0.456,0,0,0-.34-0.162h-15.83l-0.42-2.127a0.445,0.445,0,0,0-.41-0.328h-2.5a0.409,0.409,0,1,0,0,.818h2.16l2,9.982a2.926,2.926,0,0,0,2.84,2.292H1889a0.41,0.41,0,1,0,0-.819h-9.5a1.939,1.939,0,0,1-1.67-.9L1890,78.733a0.349,0.349,0,0,0,.33-0.327L1892,71.86A0.413,0.413,0,0,0,1891.92,71.615ZM1889.58,78l-12.16,1.554-1.5-7.363H1891Zm-10.5,4.909a2.046,2.046,0,1,0,2.09,2.046A2.045,2.045,0,0,0,1879.08,82.907Zm0,3.272a1.227,1.227,0,1,1,1.25-1.226A1.274,1.274,0,0,1,1879.08,86.179Zm8.34-3.272a2.045,2.045,0,1,0,2.08,2.046A2.048,2.048,0,0,0,1887.42,82.907Zm0,3.272a1.227,1.227,0,1,1,1.25-1.226A1.267,1.267,0,0,1,1887.42,86.179Z" transform="translate(-1872 -69)"></path>
+                    </svg>
+                  </div>
+                  <div id="test_item_count">
+                    
+                      x<strong class="product_Q cart_item_count">0</strong>
+                    
+                  </div>
+                </button>
+              </div>
+    
+              <div class="nav-wrapper col-sm col-12 pl-0 order-sm-2">
+                <div class="row align-items-center d-sm-none mx-0 py-20">
+                  <div class="col search">
+    
+                    <form action="/search" method="get" role="search">
+                      <div class="row align-items-center mx-0">
+                        <div class="col-auto px-0">
+                          <button class="btn__search btn--sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                              <path class="svg__search" d="M1708,83.006a6.89,6.89,0,0,0,4.48-1.63l5.43,5.435a0.63,0.63,0,0,0,.45.186,0.614,0.614,0,0,0,.45-0.186,0.633,0.633,0,0,0,0-.9l-5.43-5.437A6.995,6.995,0,1,0,1708,83.006Zm0-12.735A5.731,5.731,0,1,1,1702.27,76,5.735,5.735,0,0,1,1708,70.271Z" transform="translate(-1701 -69)"></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="col px-0">
+                          <input type="search" name="q" placeholder="Search..." class="w-100 text-uppercase font-family-ProximaNovaSemibold">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <nav class="nav font-family-ProximaNovaSemibold">
+                  <ul class="nav__menu text-uppercase js-nav">
+                  
+                    
+                      <li>
+                        <a href="/homepage">Home</a>
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        <a href="/product">Products</a>
+                      </li>
+                    
+                  
+                      <li>
+                        <a href="#shopify-section-1543829443236">About</a>
+                      </li>
+                    
+                    
+                  
+                    
+                      <li>
+                        <a href="#footer">Contact Us</a>
+                      </li>
+                    
+                  
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+    
+          <div class="search__down js-search-down">
+            <form action="/search" method="get" role="search" class="js-search-form">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">
+                    <input type="search" name="q" class="d-md-inline d-none" placeholder="Search..." lass="w-100 text-uppercase font-family-ProximaNovaSemibold">
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn__search btn--sm h-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path class="svg__search" d="M1708,83.006a6.89,6.89,0,0,0,4.48-1.63l5.43,5.435a0.63,0.63,0,0,0,.45.186,0.614,0.614,0,0,0,.45-0.186,0.633,0.633,0,0,0,0-.9l-5.43-5.437A6.995,6.995,0,1,0,1708,83.006Zm0-12.735A5.731,5.731,0,1,1,1702.27,76,5.735,5.735,0,0,1,1708,70.271Z" transform="translate(-1701 -69)"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </header>
+            
+    </div>
+        <main role="main" id="MainContent">
+    
+                <!-- spurit_sri-added -->
+                <script>
+                    if(typeof(Spurit) === 'undefined'){
+                        var Spurit = {};
+                    }
+                    if(!Spurit.recurringInvoices){
+                        Spurit.recurringInvoices = {};
+                    }
+                    if(!Spurit.recurringInvoices.snippet){
+                        Spurit.recurringInvoices.snippet = {};
+                    }
+                    Spurit.recurringInvoices.snippet.product = {"id":548244422716,"title":"Genius Consciousness","handle":"genius-consciousness","description":"\u003csection class=\"product__features bg-blue-lighten font-size-sm text-sm-left text-center\"\u003e\n\u003cdiv class=\"container\"\u003e\n\u003cdiv class=\"row justify-content-lg-center\"\u003e\n\u003cdiv class=\"col-11 col-12\"\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_7_f695377f-fd65-4b80-8882-406355696cfc_large.png?v=1551181281\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eIgnite Cognitive Function\u003c\/h3\u003e\n\u003cp\u003eThe potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_1_1e82e96a-ec50-4556-bee6-4133bc6ec2d7_large.png?v=1550499520\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eBoost Creativity\u003c\/h3\u003e\n\u003cp\u003eEliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_2_ed870a05-95d8-47d3-8adb-1bcd2c12f15a_large.png?v=1551181294\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eNeurogeneration\u003c\/h3\u003e\n\u003cp\u003eLion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_3_1566c332-fc29-4937-9dbe-d1f59f783087_large.png?v=1550499558\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eNeuroprotection\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_4_28f224a4-e994-4eed-a110-e85e3c81e555_large.png?v=1550499570\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eWhen \u0026amp; How to Use\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_5_6ea322e5-2e6d-4dfa-9f72-fb492778843d_large.png?v=1550499586\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eHow to Stack\u003c\/h3\u003e\n\u003cp\u003eFor “tunnel vision” focus during training: mix a serving of Genius Consciousness with Genius Pre in 12-16 oz of water and drink 30-60 minutes before exercise.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor Increased mental energy and cognitive health support: Consume one serving of Genius Consciousness with one serving of Genius Mushrooms.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor added mood enhancement and stress relief: Consume two capsules (½ serving) of Genius Joy with one serving of Genius Consciousness.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/section\u003e","published_at":"2018-03-21T17:06:05-07:00","created_at":"2018-03-21T17:09:59-07:00","vendor":"The Genius Brand","type":"","tags":["__amazon:https:\/\/www.amazon.com\/s\/ref=nb_sb_noss?url=me%3DA252P3T6P8OID4\u0026field-keywords=nootropics\u0026tag=einsteins0c-20","energy","genius-creatine","genius-heart-cardiovascular","genius-joy","genius-mushrooms","genius-pre","mood enhancement","nootropic"],"price":3799,"price_min":3799,"price_max":3799,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":7183728771132,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"Genius Consciousness","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"Genius Consciousness","public_title":null,"options":["Default Title"],"price":3799,"weight":170,"compare_at_price":null,"inventory_management":"shopify","barcode":""}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-Consciousness-HighAngle.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/geniusconsiousnesstrio.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-CONSCIOUSNESS-Rendering-RIGHT.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-CONSCIOUSNESS-Rendering-LEFT.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GeniusConsciousnessNutritionAmazon.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq1.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq2.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq3.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq4.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq5.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq6.jpg?v=1524112191"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-Consciousness-HighAngle.png?v=1524112191","options":["Title"],"content":"\u003csection class=\"product__features bg-blue-lighten font-size-sm text-sm-left text-center\"\u003e\n\u003cdiv class=\"container\"\u003e\n\u003cdiv class=\"row justify-content-lg-center\"\u003e\n\u003cdiv class=\"col-11 col-12\"\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_7_f695377f-fd65-4b80-8882-406355696cfc_large.png?v=1551181281\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eIgnite Cognitive Function\u003c\/h3\u003e\n\u003cp\u003eThe potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_1_1e82e96a-ec50-4556-bee6-4133bc6ec2d7_large.png?v=1550499520\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eBoost Creativity\u003c\/h3\u003e\n\u003cp\u003eEliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_2_ed870a05-95d8-47d3-8adb-1bcd2c12f15a_large.png?v=1551181294\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eNeurogeneration\u003c\/h3\u003e\n\u003cp\u003eLion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_3_1566c332-fc29-4937-9dbe-d1f59f783087_large.png?v=1550499558\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eNeuroprotection\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_4_28f224a4-e994-4eed-a110-e85e3c81e555_large.png?v=1550499570\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eWhen \u0026amp; How to Use\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_5_6ea322e5-2e6d-4dfa-9f72-fb492778843d_large.png?v=1550499586\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eHow to Stack\u003c\/h3\u003e\n\u003cp\u003eFor “tunnel vision” focus during training: mix a serving of Genius Consciousness with Genius Pre in 12-16 oz of water and drink 30-60 minutes before exercise.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor Increased mental energy and cognitive health support: Consume one serving of Genius Consciousness with one serving of Genius Mushrooms.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor added mood enhancement and stress relief: Consume two capsules (½ serving) of Genius Joy with one serving of Genius Consciousness.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/section\u003e"};
+                </script>
+                
+                <!-- /spurit_sri-added -->
+                
+                
+                
+                
+                <div id="shopify-section-product" class="shopify-section"><meta itemprop="name" content="Genius Consciousness">
+                
+                <meta itemprop="url" content="https://thegeniusbrand.com">
+                <meta itemprop="brand" content="The Genius Brand">
+                <meta itemprop="image" content="//cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_600x600.gif">
+                <meta itemprop="description" content="
+                
+                
+                
+                
+                
+                
+                
+                
+                Ignite Cognitive Function
+                The potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.
+                
+                
+                
+                
+                
+                
+                
+                Boost Creativity
+                Eliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*
+                
+                
+                
+                
+                
+                
+                
+                Neurogeneration
+                Lion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*
+                
+                
+                
+                
+                
+                
+                
+                Neuroprotection
+                Genius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.
+                
+                
+                
+                
+                
+                
+                
+                When &amp;amp; How to Use
+                Genius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.
+                
+                
+                
+                
+                
+                
+                
+                How to Stack
+                For “tunnel vision” focus during training: mix a serving of Genius Consciousness with Genius Pre in 12-16 oz of water and drink 30-60 minutes before exercise.
+                
+                For Increased mental energy and cognitive health support: Consume one serving of Genius Consciousness with one serving of Genius Mushrooms.
+                
+                For added mood enhancement and stress relief: Consume two capsules (½ serving) of Genius Joy with one serving of Genius Consciousness.
+                
+                
+                
+                
+                
+                ">
+                
+                <!---------------------------------------------- product__single ---------------------------------------------->
+                <article class="product__single">
+                  <div class="container">
+                
+                    
+                
+                   <ul class="breadcrumb py-30 text-uppercase font-family-ProximaNovaSemibold" role="navigation" aria-label="breadcrumbs">
+                       <li>
+                           <a href="/" title="translation missing: en.general.breadcrumbs.home_link_title">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16.344" height="14.812" viewBox="0 0 16.344 14.812">
+                                   <path d="M392.737,136.73l-7.729-5.651a0.426,0.426,0,0,0-.5,0l-7.729,5.651a0.423,0.423,0,1,0,.5.683l7.479-5.468,7.478,5.468A0.424,0.424,0,1,0,392.737,136.73Zm-2.236.779a0.423,0.423,0,0,0-.423.423v7.046h-3.2v-3.989a2.119,2.119,0,0,0-2.118-2.115,1.859,1.859,0,0,0-1.785,2.115v3.989h-3.035v-7.046a0.424,0.424,0,0,0-.848,0V145.4a0.424,0.424,0,0,0,.424.423H383.4a0.423,0.423,0,0,0,.422-0.39c0-.011,0-0.021,0-0.033V140.99a1.028,1.028,0,0,1,.938-1.269,1.271,1.271,0,0,1,1.271,1.269V145.4c0,0.012,0,.022,0,0.033a0.423,0.423,0,0,0,.422.39H390.5a0.423,0.423,0,0,0,.423-0.423v-7.469A0.423,0.423,0,0,0,390.5,137.509Z" transform="translate(-376.594 -131)"></path>
+                               </svg>
+                           </a>
+                       </li>
+                       
+                
+                           
+                
+                               
+                                   
+                                   <li> <a href="/collections/all-products" title="">All Products</a></li>
+                               
+                           
+                           <li>Genius Consciousness</li>
+                
+                           
+                   </ul>
+                
+                
+                    
+                      
+                
+                    <header class="product__single__header text-center">
+                      <h1>Genius <span style="color:  #A3CB38">Genius Consciousness</span></h1>  
+                    </header>
+                    
+                
+                    <div class="row">
+                      <div class="col-sm-6 col-12">
+                            <div class="row mx-0">              
+                              <div class="col-sm col-12 px-0 order-sm-2">
+                                <div class="product__gallery">
+                                  <div class="owl-carousel js-gallery owl-loaded">
+                                    
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                        
+                                      
+                                    
+                                  <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-281px, 0px, 0px); transition: all 0s ease 0s; width: 3098px;"><div class="owl-item" style="width: 281.587px;"><div class="item d-flex align-items-center justify-content-center">
+                                          <figure class="product__gallery__image">
+                                            <img src="/static/images/prdt2.png" alt="Genius Consciousness">
+                                          </figure>
+
+                                        </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div>
+                                </div>
+                              </div>
+                
+
+                            </div>
+                          </div>
+                  
+                      <div class="col-sm-6 col-12">
+                        <div class="product__buy ml-lg-25 px-md-50 py-md-40 p-20 bg-blue-lighten" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                          <meta itemprop="priceCurrency" content="USD">
+                          <meta itemprop="price" content="0.0">
+                          <link itemprop="availability" href="http://schema.org/OutOfStock">
+                
+                          <div data-section-id="product" data-section-type="product" data-enable-history-state="true"><form id="add_to_cart" action="/cart/add" method="post" enctype="multipart/form-data">
+                            <select style="display:none" name="id" class="no-js" data-product-select="">
+                                
+                                  <option selected="selected" value="7183728771132">
+                                      Default Title
+                                  </option>
+                                
+                            </select>
+                                  
+                    <style>#Quantity::-webkit-inner-spin-button,
+                        #Quantity::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }</style>
+                            
+                            <div class="row align-items-center">
+                              <div class="col-sm col-12">
+                                <div class="product__buy__price text-center" data-price-wrapper="">
+                                  <span class="text-orange">
+                                    <strong data-product-price="">$37.99</strong>
+                                  </span>
+                                    
+                                </div>
+                              </div>
+                            </div>
+                            <div id="similar_products">
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    <input type="hidden" name="similar_products[]" value="genius-joy">
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    <input type="hidden" name="similar_products[]" value="genius-mushrooms">
+                                    
+                                  
+                                
+                                  
+                                    <input type="hidden" name="similar_products[]" value="genius-pre">
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </div>
+                
+                            <div class="text-center mt-50">
+                              <span class="bold-ro__widget-loading" data-widget-loading="" style="display:none"><span class="bold-ro__loading-container">
+                <style>
+                .bold-ro__widget-loading {
+                    margin-left: 45%;
+                }
+                .bold-ro__widget-loading-icon {
+                    border: 10px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 10px solid #3498db;
+                    width: 50px;
+                    height: 50px;
+                    -webkit-animation: spin 2s linear infinite;
+                    animation: spin 2s linear infinite;
+                    margin-bottom: 20px;
+                }
+                </style>
+                    <div data-bold-widget-loading-icon="" class="bold-ro__widget-loading-icon"></div>
+                </span></span><button type="submit" class="btn btn--orange-gradient btn--lg" name="add" data-add-to-cart="" style="visibility: visible;">
+                                <span data-add-to-cart-text="">
+                                
+                                    Add to Cart
+                                
+                              </span>
+                              </button>
+                            </div> 
+                          </form>
+                            
+                              <script type="application/json" data-product-json="">
+                                {"id":548244422716,"title":"Genius Consciousness","handle":"genius-consciousness","description":"\u003csection class=\"product__features bg-blue-lighten font-size-sm text-sm-left text-center\"\u003e\n\u003cdiv class=\"container\"\u003e\n\u003cdiv class=\"row justify-content-lg-center\"\u003e\n\u003cdiv class=\"col-11 col-12\"\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_7_f695377f-fd65-4b80-8882-406355696cfc_large.png?v=1551181281\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eIgnite Cognitive Function\u003c\/h3\u003e\n\u003cp\u003eThe potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_1_1e82e96a-ec50-4556-bee6-4133bc6ec2d7_large.png?v=1550499520\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eBoost Creativity\u003c\/h3\u003e\n\u003cp\u003eEliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_2_ed870a05-95d8-47d3-8adb-1bcd2c12f15a_large.png?v=1551181294\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eNeurogeneration\u003c\/h3\u003e\n\u003cp\u003eLion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_3_1566c332-fc29-4937-9dbe-d1f59f783087_large.png?v=1550499558\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eNeuroprotection\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_4_28f224a4-e994-4eed-a110-e85e3c81e555_large.png?v=1550499570\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eWhen \u0026amp; How to Use\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_5_6ea322e5-2e6d-4dfa-9f72-fb492778843d_large.png?v=1550499586\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eHow to Stack\u003c\/h3\u003e\n\u003cp\u003eFor “tunnel vision” focus during training: mix a serving of Genius Consciousness with Genius Pre in 12-16 oz of water and drink 30-60 minutes before exercise.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor Increased mental energy and cognitive health support: Consume one serving of Genius Consciousness with one serving of Genius Mushrooms.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor added mood enhancement and stress relief: Consume two capsules (½ serving) of Genius Joy with one serving of Genius Consciousness.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/section\u003e","published_at":"2018-03-21T17:06:05-07:00","created_at":"2018-03-21T17:09:59-07:00","vendor":"The Genius Brand","type":"","tags":["__amazon:https:\/\/www.amazon.com\/s\/ref=nb_sb_noss?url=me%3DA252P3T6P8OID4\u0026field-keywords=nootropics\u0026tag=einsteins0c-20","energy","genius-creatine","genius-heart-cardiovascular","genius-joy","genius-mushrooms","genius-pre","mood enhancement","nootropic"],"price":3799,"price_min":3799,"price_max":3799,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":7183728771132,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"Genius Consciousness","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"Genius Consciousness","public_title":null,"options":["Default Title"],"price":3799,"weight":170,"compare_at_price":null,"inventory_management":"shopify","barcode":""}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-Consciousness-HighAngle.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/geniusconsiousnesstrio.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-CONSCIOUSNESS-Rendering-RIGHT.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-CONSCIOUSNESS-Rendering-LEFT.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GeniusConsciousnessNutritionAmazon.png?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq1.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq2.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq3.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq4.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq5.jpg?v=1524112191","\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/amazonsq6.jpg?v=1524112191"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0013\/3270\/7388\/products\/GENIUS-Consciousness-HighAngle.png?v=1524112191","options":["Title"],"content":"\u003csection class=\"product__features bg-blue-lighten font-size-sm text-sm-left text-center\"\u003e\n\u003cdiv class=\"container\"\u003e\n\u003cdiv class=\"row justify-content-lg-center\"\u003e\n\u003cdiv class=\"col-11 col-12\"\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_7_f695377f-fd65-4b80-8882-406355696cfc_large.png?v=1551181281\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eIgnite Cognitive Function\u003c\/h3\u003e\n\u003cp\u003eThe potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_1_1e82e96a-ec50-4556-bee6-4133bc6ec2d7_large.png?v=1550499520\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eBoost Creativity\u003c\/h3\u003e\n\u003cp\u003eEliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_2_ed870a05-95d8-47d3-8adb-1bcd2c12f15a_large.png?v=1551181294\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eNeurogeneration\u003c\/h3\u003e\n\u003cp\u003eLion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_3_1566c332-fc29-4937-9dbe-d1f59f783087_large.png?v=1550499558\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eNeuroprotection\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_4_28f224a4-e994-4eed-a110-e85e3c81e555_large.png?v=1550499570\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12\"\u003e\n\u003ch3\u003eWhen \u0026amp; How to Use\u003c\/h3\u003e\n\u003cp\u003eGenius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"product__features__row row align-items-sm-center\"\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm-2\"\u003e\n\u003cfigure class=\"text-sm-left text-center\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/0191\/6269\/3696\/files\/Screenshot_5_6ea322e5-2e6d-4dfa-9f72-fb492778843d_large.png?v=1550499586\" alt=\"\"\u003e\u003c\/figure\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"col-sm-6 col-12 order-sm -1\"\u003e\n\u003ch3\u003eHow to Stack\u003c\/h3\u003e\n\u003cp\u003eFor “tunnel vision” focus during training: mix a serving of Genius Consciousness with Genius Pre in 12-16 oz of water and drink 30-60 minutes before exercise.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor Increased mental energy and cognitive health support: Consume one serving of Genius Consciousness with one serving of Genius Mushrooms.\u003c\/p\u003e\n\u003cbr\u003e\n\u003cp\u003eFor added mood enhancement and stress relief: Consume two capsules (½ serving) of Genius Joy with one serving of Genius Consciousness.\u003c\/p\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/div\u003e\n\u003c\/section\u003e"}
+                              </script>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                
+                  <section class="product__features bg-blue-lighten font-size-sm text-sm-left text-center">
+                <div class="container">
+                <div class="row justify-content-lg-center">
+                <div class="col-11 col-12">
+                <div class="product__features__row row align-items-sm-center">
+                <div class="col-sm-6 col-12">
+                <figure class="text-sm-left text-center"><img src="//cdn.shopify.com/s/files/1/0191/6269/3696/files/Screenshot_7_f695377f-fd65-4b80-8882-406355696cfc_large.png?v=1551181281" alt=""></figure>
+                </div>
+                <div class="col-sm-6 col-12">
+                <h3>Ignite Cognitive Function</h3>
+                <p>The potent combination of Dyamine, Neurofactor, AlphaSize, and Natural Caffeine activate neurons to work faster and more efficiently leading to greater working memory, focus, and learning.</p>
+                </div>
+                </div>
+                <div class="product__features__row row align-items-sm-center">
+                <div class="col-sm-6 col-12 order-sm-2">
+                <figure class="text-sm-left text-center"><img src="//cdn.shopify.com/s/files/1/0191/6269/3696/files/Screenshot_1_1e82e96a-ec50-4556-bee6-4133bc6ec2d7_large.png?v=1550499520" alt=""></figure>
+                </div>
+                <div class="col-sm-6 col-12 order-sm -1">
+                <h3>Boost Creativity</h3>
+                <p>Eliminate brain fog and brush away the “haze” blunting your thinking and creativity. Genius Consciousness opens the mind to limitless possibilities.*</p>
+                </div>
+                </div>
+                <div class="product__features__row row align-items-sm-center">
+                <div class="col-sm-6 col-12">
+                <figure class="text-sm-left text-center"><img src="//cdn.shopify.com/s/files/1/0191/6269/3696/files/Screenshot_2_ed870a05-95d8-47d3-8adb-1bcd2c12f15a_large.png?v=1551181294" alt=""></figure>
+                </div>
+                <div class="col-sm-6 col-12">
+                <h3>Neurogeneration</h3>
+                <p>Lion’s Mane and NeuroFactor stimulate brain-derived neurotrophic factor (BDNF) and nerve growth factor (NGF) to support the creation of new brain cells.*</p>
+                </div>
+                </div>
+                <div class="product__features__row row align-items-sm-center">
+                <div class="col-sm-6 col-12 order-sm-2">
+                <figure class="text-sm-left text-center"><img src="//cdn.shopify.com/s/files/1/0191/6269/3696/files/Screenshot_3_1566c332-fc29-4937-9dbe-d1f59f783087_large.png?v=1550499558" alt=""></figure>
+                </div>
+                <div class="col-sm-6 col-12 order-sm -1">
+                <h3>Neuroprotection</h3>
+                <p>Genius Consciousness protects and preserves cognitive function with a hand-picked selection of nootropics that decrease neuronal excitability and excitotoxicity, combat inflammation, and reduce stress.</p>
+                </div>
+                </div>
+                <div class="product__features__row row align-items-sm-center">
+                <div class="col-sm-6 col-12">
+                <figure class="text-sm-left text-center"><img src="//cdn.shopify.com/s/files/1/0191/6269/3696/files/Screenshot_4_28f224a4-e994-4eed-a110-e85e3c81e555_large.png?v=1550499570" alt=""></figure>
+                </div>
+                <div class="col-sm-6 col-12">
+                <h3>When &amp; How to Use</h3>
+                <p>Genius Consciousness is intended to be taken prior to engaging in cognitively demanding, mentally taxing work. As such, we recommend mixing a ½ serving of Genius Consciousness and consuming it 15-30 minutes prior to working. If comfortable and wanting greater energy and more intense focus, consume a full serving in 8-12 oz of water.</p>
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                </div>
+                <header class="product__single__header text-center">
+                        
+                </header>
+                </section>
+                
+            
+                </main>
+                
+                <div id="shopify-section-1549031463992" class="shopify-section">    <section class="guarantee bg-orange text-white">
+                        <div class="container">
+                          <div class="row align-items-sm-end">
+                            <div class="col-lg-7 col-sm-8 offset-lg-1 col-12 order-sm-2">
+                              <div class="contant text-justify">
+                                <h2 class="h3 text-sm-left text-center font-family-ProximaNovaBlack text-white text-uppercase">100% Money <br>Back Guarantee</h2>
+                                <h3 class="h6 mb-10 text-sm-left text-center font-family-ProximaNovaBlack text-uppercase text-white">90 Day Money Back Guarantee</h3>
+                                <p>Our team wants to ensure that you realize your full potential &amp; get the results you want! With our formulations being grounded in science, we expect our products to 100% deliver exactly what they claim. With that being said, if for whatever reason, you aren’t 110% fully satisfied, we will gladly refund your money! All purchases are backed by our 90 day Genius Promise.</p>
+                              </div>
+                            </div>
+                  
+                            <div class="col-sm-4 col-12 order-sm-1">
+                              <figure class="position-relative">
+                                <img src="/static/images/founder2.png" style="width: 130%" alt="">
+                              </figure>
+                            </div>
+                          </div>
+                        </div>
+                      </section> 
+                  
+                      
+                  
+                  
+                  
+                  
+                  </div>
+                  <div id="shopify-section-footer" class="shopify-section">
+                    <footer class="footer">    
+                      <nav class="nav font-family-ProximaNovaSemibold text-sm-center text-uppercase">
+                        <div class="container">
+                          <ul class="nav__menu nav__menu__bottom mx-auto text-uppercase">
+                            
+                            <li><a href="/homepage">Home</a></li>
+                
+                            <li><a href="/product">Products</a></li>
+                          
+                            <li><a href="/homepage#shopify-section-1543829443236">About</a></li>
+                          
+                            <li><a href="#footer">Contact US</a></li>
+                            
+                          </ul>
+                        </div>
+                      </nav>
+                      <div class="footer__content">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-2 col-12 d-sm-block d-none">
+                              <div class="row">
+                                <div class="col-sm-8 col-12 mb-md-0 mb-30">
+                                  <ul class="nav__menu__footer text-md-left text-center">
+                                      
+                                    <li><a href="/homepage">Home</a></li>
+                
+                                    <li><a href="/product">Products</a></li>
+                                  
+                                    <li><a href="homepage#shopify-section-1543829443236">About</a></li>
+                                  
+                                    <li><a href="#footer">Contact US</a></li>
+                                    
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="col-md-5 col-12">
+                              <div class="row">
+                                <div class="col-sm-auto col-12">
+                                  <div class="pr-lg-20 text-center">
+                                    <a href="/" class="d-sm-block d-none"><img src="/static/images/Brain-Bot.png" width="150" height="150" alt="Brain Bot"></a>
+                                    <a href="/" class="d-sm-none d-block mb-30"><img src="/static/images/Brain-Bot.png" width="150" height="150" alt="Brain Bot"></a>
+                                  </div>  
+                                </div>
+                
+                                <div class="col-sm col-12">
+                                  <div class="mb-sm-40 mb-20 text-justify">
+                                    <h4 class="h6-sm h6-px mb-15 text-sm-left text-center">About Us</h4>
+                                    <p>The Genius Brand was born with an emphasis on science and complete disregard for standard profit margins. We were going to make the best products possible and worry about cost later. That sounds crazy to most, but if nothing else, there would finally be some products on the market that we could use again! </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+            
+                            <div class="col-md-5 col-12">
+                              <div class="row">
+                                <div class="col-sm-auto col-12">
+                                  <div class="mb-sm-40 mb-30">
+                                    <h4 class="h6-sm h6-px mb-15 text-sm-left text-center">Find Us</h4>
+                
+                                    <div class="footer__socials text-sm-left text-center">
+                                      <a href="https://www.facebook.com/TheGeniusBrand/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.28" height="36" viewBox="0 0 36.28 36">
+                                          <path d="M1158,10286h22.28a6.976,6.976,0,0,1,7,7v22a6.976,6.976,0,0,1-7,7H1158a6.976,6.976,0,0,1-7-7v-22A6.976,6.976,0,0,1,1158,10286Zm16.79,36v-13.6h6.05v-6h-6.05v-2.4a1.438,1.438,0,0,1,1.16-1.6h4.89v-6h-4.89c-3.75,0-6.8,3.6-6.8,7.7v2.3h-4.44v6h4.44v13.6h5.64Z" transform="translate(-1151 -10286)"></path>
+                                        </svg>
+                                      </a>
+                
+                                      <a href="https://twitter.com/suppsmarter?lang=en" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.31" height="36" viewBox="0 0 36.31 36">
+                                          <path fill-rule="evenodd" d="M1204.03,10286h22.31a6.976,6.976,0,0,1,7,7v22a6.976,6.976,0,0,1-7,7h-22.31a6.982,6.982,0,0,1-7-7v-22A6.982,6.982,0,0,1,1204.03,10286Zm20.18,14,0.01,0.5a12.535,12.535,0,0,1-12.71,12.6,12.366,12.366,0,0,1-6.85-2,3.814,3.814,0,0,0,1.07.1,8.928,8.928,0,0,0,5.54-1.9,4.393,4.393,0,0,1-4.17-3.1,2.365,2.365,0,0,0,.84.1,4.593,4.593,0,0,0,1.18-.1,4.546,4.546,0,0,1-3.59-4.4h0a4.612,4.612,0,0,0,2.03.5,4.38,4.38,0,0,1-1.38-5.9,12.656,12.656,0,0,0,9.2,4.6,4.186,4.186,0,0,1-.11-1,4.454,4.454,0,0,1,4.47-4.4,4.349,4.349,0,0,1,3.26,1.4,9.321,9.321,0,0,0,2.84-1.1,4.882,4.882,0,0,1-1.97,2.5,10.826,10.826,0,0,0,2.57-.7A10.333,10.333,0,0,1,1224.21,10300Z" transform="translate(-1197.03 -10286)"></path>
+                                        </svg>
+                                      </a>
+                
+                                      <a href="https://www.pinterest.com/thegeniusbrand/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.32" height="36" viewBox="0 0 36.32 36">
+                                          <path fill-rule="evenodd" d="M1248.09,10286h22.32a6.982,6.982,0,0,1,7,7v22a6.982,6.982,0,0,1-7,7h-22.32a6.982,6.982,0,0,1-7-7v-22A6.982,6.982,0,0,1,1248.09,10286Zm12.58,22.9c-1.33-.1-1.89-0.8-2.92-1.4-0.58,3-1.27,5.8-3.34,7.3-0.64-4.5.93-7.9,1.67-11.5-1.25-2,.15-6.2,2.78-5.2,3.23,1.3-2.81,7.7,1.25,8.6,4.24,0.8,5.97-7.3,3.34-10-3.8-3.8-11.05-.1-10.16,5.4,0.22,1.3,1.61,1.7.56,3.6-2.43-.5-3.16-2.4-3.06-5,0.15-4.1,3.75-7,7.37-7.4,4.58-.5,8.87,1.6,9.46,5.9C1268.29,10304,1265.56,10309.2,1260.67,10308.9Z" transform="translate(-1241.09 -10286)"></path>
+                                        </svg>
+                                      </a>
+                
+                                      <a href="https://www.instagram.com/geniussupplements/?hl=en" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.31" height="36" viewBox="0 0 36.31 36">
+                                          <path fill-rule="evenodd" d="M1292.94,10286h22.31a6.976,6.976,0,0,1,7,7v22a6.976,6.976,0,0,1-7,7h-22.31a6.976,6.976,0,0,1-7-7v-22A6.976,6.976,0,0,1,1292.94,10286Zm16.69,5.8h-11.06a6.757,6.757,0,0,0-6.81,6.7v11a6.757,6.757,0,0,0,6.81,6.7h11.06a6.763,6.763,0,0,0,6.81-6.7v-11A6.763,6.763,0,0,0,1309.63,10291.8Zm4.62,17.7a4.644,4.644,0,0,1-4.62,4.6h-11.06a4.637,4.637,0,0,1-4.62-4.6v-11a4.637,4.637,0,0,1,4.62-4.6h11.06a4.644,4.644,0,0,1,4.62,4.6v11h0Zm-10.15-11.8a6.3,6.3,0,1,0,6.36,6.3A6.319,6.319,0,0,0,1304.1,10297.7Zm0,10.4a4.1,4.1,0,1,1,4.17-4.1A4.115,4.115,0,0,1,1304.1,10308.1Zm6.62-12.3a1.637,1.637,0,0,0-1.13.5,1.572,1.572,0,0,0-.47,1.1,1.635,1.635,0,0,0,.47,1.2,1.81,1.81,0,0,0,2.27,0,1.635,1.635,0,0,0,.47-1.2,1.572,1.572,0,0,0-.47-1.1A1.641,1.641,0,0,0,1310.72,10295.8Z" transform="translate(-1285.94 -10286)"></path>
+                                        </svg>
+                                      </a>
+                
+                                      <a href="https://www.youtube.com/channel/UCKSYzW3N5jfm-JCssEa2Zhg/feed" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.28" height="36" viewBox="0 0 36.28 36">
+                                          <path fill-rule="evenodd" d="M1337.72,10286H1360a6.976,6.976,0,0,1,7,7v22a6.976,6.976,0,0,1-7,7h-22.28a6.976,6.976,0,0,1-7-7v-22A6.976,6.976,0,0,1,1337.72,10286Zm22.19,11.5c-0.85-1-2.42-1.4-5.43-1.4h-10.9c-3.07,0-4.67.4-5.51,1.5-0.83,1-.83,2.6-0.83,4.7v4.1c0,4.1.98,6.2,6.34,6.2h10.9c2.61,0,4.05-.3,4.98-1.2,0.96-.9,1.37-2.4,1.37-5v-4.1C1360.83,10300.1,1360.77,10298.5,1359.91,10297.5Zm-7.53,7.4-4.94,2.6a0.5,0.5,0,0,1-.36.1c-0.13,0-.27-0.1-0.39-0.1a0.882,0.882,0,0,1-.37-0.7v-5.1a0.882,0.882,0,0,1,.37-0.7,0.95,0.95,0,0,1,.74,0l4.95,2.6a0.717,0.717,0,0,1,.41.6A0.734,0.734,0,0,1,1352.38,10304.9Z" transform="translate(-1330.72 -10286)"></path>
+                                        </svg> 
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm col-12">
+                                  <div class="mb-sm-40 mb-20 text-justify">
+                                    <p>†The statements on this site have not been evaluated by the food and drug administration. These  products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div id="footer" class="footer__copyrights py-sm-30 py-15">
+                        <div class="container">
+                          <div class="row align-items-center">
+                            <div class="col-sm col-12 order-sm-2 text-center mb-sm-0 mb-20">
+                              <img src="//cdn.shopify.com/s/files/1/0013/3270/7388/t/5/assets/../assets/the-genius-brand-logo-small.svg?139" alt="">
+                            </div>
+                            <div class="col-sm col-12 order-sm-1 text-sm-left text-center mb-sm-0 mb-20">
+                              <p>© 2019, Brain Bot</p>
+                            </div>
+                            <div class="col-sm col-12 order-sm-3 text-sm-right text-center">
+                              <a href=""><img src="//cdn.shopify.com/s/files/1/0013/3270/7388/t/5/assets/../assets/dimart-studio-logo.png?139" alt=""></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+                
+                </div>
+                <iframe src="/1332707388/digital_wallets/dialog" scrolling="no" tabindex="-1" aria-hidden="true" style="position: fixed; top: 0px; left: 0px; z-index: 99999; height: 0px; width: 0px; border: 0px;"></iframe>
+                <div class="bold-ro__modal-container" style="display: none;"><div class="bold-ro__modal"><div class="bold-ro__modal-inner"><a class="bold-ro__modal-close" data-bold-modal-close="">X</a><div class="bold-ro__modal-content"></div></div></div></div>
+            </body>
+            </html>
